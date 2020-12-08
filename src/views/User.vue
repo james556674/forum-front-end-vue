@@ -1,6 +1,7 @@
 <template>
   <div class="container py-5">
     <!-- UserProfileCard -->
+    <UserProfileCard :initial-profile="profile" />
 
     <div class="row">
       <div class="col-md-4">
@@ -18,6 +19,8 @@
 </template>
 
 <script>
+import UserProfileCard from "./../components/UserProfileCard";
+
 const dummyData = {
   profile: {
     id: 1,
@@ -1284,6 +1287,9 @@ const dummyData = {
   isFollowed: false,
 };
 export default {
+  components: {
+    UserProfileCard,
+  },
   data() {
     return {
       profile: {
